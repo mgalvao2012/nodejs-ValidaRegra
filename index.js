@@ -30,9 +30,6 @@ app.post('/ValidaRegra', function(req, res){
   } catch (e) {
     res.json({ resultado : 'erro', mensagem : e })
   }
-
-  //console.log(dados);
-  //res.send('ok');  
 });
 
 // set port, listen for requests
