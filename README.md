@@ -10,7 +10,7 @@ Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cl
 
 ```sh
 $ git clone https://github.com/mgalvao2012/nodejs-ValidaRegra # or clone your own fork
-$ cd node-js-getting-started
+$ cd nodejs-ValidaRegra
 $ npm install
 $ npm start
 ```
