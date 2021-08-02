@@ -2,12 +2,12 @@ POST http://localhost:5000/ValidaRegra
 content-type: application/json
 
 {
- "ORIGEM" : 1,
+ "ORIGEM" : 0,
  "MACA" : 10,
  "BATATINHA" : 3,
  "BANANA": 26,
  "Feira": 1,
- "regra" : "$data.ORIGEM == 0 && ($data.MACA == 10 && ($data.BATATINHA == 3 || $data.BATATINHA == 4 || $data.BATATINHA == 6 || $data.BATATINHA == 9 || $data.BATATINHA == 7 || $data.BATATINHA == 8 || $data.BATATINHA == 10 || $data.BATATINHA == 18 || $data.BATATINHA == 20 || $data.BATATINHA == 235 || $data.BATATINHA == 26 || $data.BATATINHA == 27 || $data.BATATINHA == 35 || $data.BATATINHA == 34 || $data.BATATINHA == 33 || $data.BATATINHA == 36 || $data.BATATINHA == 37 || $data.BATATINHA == 38) && $data.BANANA == 26) || ($data.MACA == 60 && ($data.BATATINHA == 3 || $data.BATATINHA == 6 || $data.BATATINHA == 7 || $data.BATATINHA == 260) && $data.BANANA == 26) || $data.MACA == 19 && (($data.BATATINHA == 3 || $data.BATATINHA == 4 || $data.BATATINHA == 20 || $data.BATATINHA == 34) && $data.BANANA == 26) || (($data.BATATINHA == 6 || $data.BATATINHA == 7 || $data.BATATINHA == 8) && $data.BANANA == 3) || (($data.BATATINHA == 33) && $data.BANANA == 40) || $data.MACA == 14 && ($data.BATATINHA == 3 && $data.BANANA == 40) || ($data.BATATINHA == 6 && $data.BANANA == 3) && $data.Feira == 1"
+ "regra" : "ORIGEM == 1 && (MACA == 10 && (BATATINHA == 3 || BATATINHA == 4 || BATATINHA == 6 || BATATINHA == 9 || BATATINHA == 7 || BATATINHA == 8 || BATATINHA == 10 || BATATINHA == 18 || BATATINHA == 20 || BATATINHA == 235 || BATATINHA == 26 || BATATINHA == 27 || BATATINHA == 35 || BATATINHA == 34 || BATATINHA == 33 || BATATINHA == 36 || BATATINHA == 37 || BATATINHA == 38) && BANANA == 26) || (MACA == 60 && (BATATINHA == 3 || BATATINHA == 6 || BATATINHA == 7 || BATATINHA == 260) && BANANA == 26) || MACA == 19 && ((BATATINHA == 3 || BATATINHA == 4 || BATATINHA == 20 || BATATINHA == 34) && BANANA == 26) || ((BATATINHA == 6 || BATATINHA == 7 || BATATINHA == 8) && BANANA == 3) || ((BATATINHA == 33) && BANANA == 40) || MACA == 14 && (BATATINHA == 3 && BANANA == 40) || (BATATINHA == 6 && BANANA == 3) && Feira == 1"
  }
 
 ###
@@ -16,7 +16,7 @@ POST http://localhost:5000/ValidaRegra
 content-type: application/json
 
 {
- "ORIGEM" : 0,
+ "ORIGEM" : 1,
  "FLOR" : "x",
  "ROSA": "x",
  "CRAVO" : 7,
@@ -28,5 +28,5 @@ content-type: application/json
  "ORQUIDEA": 3,
  "AZALEIA" : -1,
  "LIRIO" : 0,
- "regra" : "$data.ORIGEM == 1 || ($data.FLOR == \"\" || $data.ROSA == \"\" || $data.FLOR == \"ESPINHO\" || $data.CRAVO == 1) && $data.CRAVO != 2 && $data.CRAVO != 3 && $data.CRAVO != 4 && $data.CRAVO != 5 && $data.CRAVO != 6 || $data.BROMELIA != 1 && $data.BROMELIA != 2 && $data.BROMELIA != 3 && $data.BROMELIA != 4 && $data.BROMELIA != 5 && $data.BROMELIA != 6 && $data.BROMELIA != 7 && $data.BROMELIA != 11 && ($data.CHAVE != 1 || $data.Choveu == 0) && ($data.ORIGEM == 0 || $data.CRAVO != 7 || MARGARIDA != 1 && MARGARIDA != 2 || $data.BROMELIA != 8) && (($data.BROMELIA == 12 || $data.BROMELIA == 13 || $data.BROMELIA == 14 || $data.BROMELIA == 15 || $data.BROMELIA == 16 || $data.BROMELIA == 17 || $data.BROMELIA == 18 || $data.BROMELIA == 19 || $data.BROMELIA == 20 || $data.BROMELIA == 21 || $data.BROMELIA == 22 || $data.CRAVO == 23 || $data.CRAVO == 38 || $data.BROMELIA == 50 || $data.BROMELIA == 51) || $data.GIRASSOL < $data.ORQUIDEA && ($data.AZALEIA < 0) && $data.LIRIO == 0)"
+ "regra" : "ORIGEM == 1 || (FLOR == \"\" || ROSA == \"\" || FLOR == \"ESPINHO\" || CRAVO == 1) && CRAVO != 2 && CRAVO != 3 && CRAVO != 4 && CRAVO != 5 && CRAVO != 6 || BROMELIA != 1 && BROMELIA != 2 && BROMELIA != 3 && BROMELIA != 4 && BROMELIA != 5 && BROMELIA != 6 && BROMELIA != 7 && BROMELIA != 11 && (CHAVE != 1 || Choveu == 0) && (ORIGEM == 0 || CRAVO != 7 || MARGARIDA != 1 && MARGARIDA != 2 || BROMELIA != 8) && ((BROMELIA == 12 || BROMELIA == 13 || BROMELIA == 14 || BROMELIA == 15 || BROMELIA == 16 || BROMELIA == 17 || BROMELIA == 18 || BROMELIA == 19 || BROMELIA == 20 || BROMELIA == 21 || BROMELIA == 22 || CRAVO == 23 || CRAVO == 38 || BROMELIA == 50 || BROMELIA == 51) || GIRASSOL < ORQUIDEA && (AZALEIA < 0) && LIRIO == 0)"
 }
