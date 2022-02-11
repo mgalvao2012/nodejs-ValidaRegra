@@ -8,12 +8,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "swagger-autogen": "node swagger.js",    
     "test": "node test.js"
   },
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "get-json": "^1.0.1"
+    "get-json": "^1.0.1",
+    "swagger-autogen": "^2.11.2",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
     "got": "^11.3.0",
