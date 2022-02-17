@@ -42,7 +42,7 @@ For more information about using Node.js on Heroku, see these Dev Center article
 
 ## Exemplo de uso
 
-O arquivo example.http tem os seguintes exemplos:
+O arquivo example.http tem alguns exemplos:
 ```
 POST https://nodejs-validaregra.herokuapp.com/ValidaRegra
 content-type: application/json
@@ -74,28 +74,3 @@ Via: 1.1 vegur
    "resultado": true
 }
 ```
-
-###
-
-### POST http://localhost:5000/ValidaRegra
-POST https://nodejs-validaregra.herokuapp.com/ValidaRegra
-content-type: application/json
-
-{
-    "parametros" : {
-        "ORIGEM" : 1,
-        "FLOR" : "ESPINHO",
-        "ROSA": "x",
-        "CRAVO" : 7,
-        "BROMELIA" : 0,
-        "CHAVE" : 0,
-        "Choveu" : 1,
-        "MARGARIDA" : 3,
-        "GIRASSOL": 1,
-        "ORQUIDEA": 3,
-        "AZALEIA" : -1,
-        "LIRIO" : 0 
-    },
-    "regra" : "ORIGEM == 1 || (FLOR == '' || ROSA == '' || FLOR == 'ESPINHO' || CRAVO == 1) && CRAVO != 2 && CRAVO != 3 && CRAVO != 4 && CRAVO != 5 && CRAVO != 6 || BROMELIA != 1 && BROMELIA != 2 && BROMELIA != 3 && BROMELIA != 4 && BROMELIA != 5 && BROMELIA != 6 && BROMELIA != 7 && BROMELIA != 11 && (CHAVE != 1 || Choveu == 0) && (ORIGEM == 0 || CRAVO != 7 || MARGARIDA != 1 && MARGARIDA != 2 || BROMELIA != 8) && ((BROMELIA == 12 || BROMELIA == 13 || BROMELIA == 14 || BROMELIA == 15 || BROMELIA == 16 || BROMELIA == 17 || BROMELIA == 18 || BROMELIA == 19 || BROMELIA == 20 || BROMELIA == 21 || BROMELIA == 22 || CRAVO == 23 || CRAVO == 38 || BROMELIA == 50 || BROMELIA == 51) || GIRASSOL < ORQUIDEA && (AZALEIA < 0) && LIRIO == 0)"
-}
-
