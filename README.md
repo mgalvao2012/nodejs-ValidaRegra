@@ -43,6 +43,7 @@ For more information about using Node.js on Heroku, see these Dev Center article
 ## Exemplo de uso
 
 O arquivo example.http tem os seguintes exemplos:
+```
 POST https://nodejs-validaregra.herokuapp.com/ValidaRegra
 content-type: application/json
 
@@ -57,22 +58,22 @@ content-type: application/json
     "regra" : "ORIGEM == 1 && (MACA == 10 && (BATATINHA == 3 || BATATINHA == 4 || BATATINHA == 6 || BATATINHA == 9 || BATATINHA == 7 || BATATINHA == 8 || BATATINHA == 10 || BATATINHA == 18 || BATATINHA == 20 || BATATINHA == 235 || BATATINHA == 26 || BATATINHA == 27 || BATATINHA == 35 || BATATINHA == 34 || BATATINHA == 33 || BATATINHA == 36 || BATATINHA == 37 || BATATINHA == 38) && BANANA == 26) || (MACA == 60 && (BATATINHA == 3 || BATATINHA == 6 || BATATINHA == 7 || BATATINHA == 260) && BANANA == 26) || MACA == 19 && ((BATATINHA == 3 || BATATINHA == 4 || BATATINHA == 20 || BATATINHA == 34) && BANANA == 26) || ((BATATINHA == 6 || BATATINHA == 7 || BATATINHA == 8) && BANANA == 3) || ((BATATINHA == 33) && BANANA == 40) || MACA == 14 && (BATATINHA == 3 && BANANA == 40) || (BATATINHA == 6 && BANANA == 3) && Feira == 1"
 }
 
-###
 ### Resposta:
-### HTTP/1.1 200 OK
-### Server: Cowboy
-### Connection: close
-### X-Powered-By: Express
-### Content-Type: application/json; charset=utf-8
-### Content-Length: 18
-### Etag: W/"12-/RSU2dbqR2XsP9blRFNdmgn76w4"
-### Date: Thu, 17 Feb 2022 12:19:06 GMT
-### Via: 1.1 vegur
-### 
-### {
-###   "resultado": true
-### }
 
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: close
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 18
+Etag: W/"12-/RSU2dbqR2XsP9blRFNdmgn76w4"
+Date: Thu, 17 Feb 2022 12:19:06 GMT
+Via: 1.1 vegur
+
+{
+   "resultado": true
+}
+```
 
 ###
 
